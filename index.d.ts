@@ -30,7 +30,7 @@ export interface PlatformStatic {
 }
 export const Platform: PlatformStatic;
 
-export interface View extends RNView {
+export class View extends RNView {
     name?: string
 }
 export {
