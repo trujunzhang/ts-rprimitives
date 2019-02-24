@@ -31,13 +31,13 @@ export interface PlatformStatic {
 export const Platform: PlatformStatic;
 
 export class Image extends RNImage {
-    name?: string
+    // name?: string
 }
 export class Text extends RNText {
-    name?: string
+    // name?: string
 }
 export class View extends RNView {
-    name?: string
+    // name?: string
 }
 
 export {
