@@ -10,11 +10,11 @@ import {
     Animated,
     Dimensions,
     Easing,
-    Image,
+    Image as RNImage,
     PixelRatio,
     PlatformOSType as RNPlatformOSType,
     StyleSheet,
-    Text,
+    Text as RNText,
     TouchableOpacityProps,
     View as RNView
 } from 'react-native';
@@ -30,15 +30,20 @@ export interface PlatformStatic {
 }
 export const Platform: PlatformStatic;
 
+export class Image extends RNImage {
+    name?: string
+}
+export class Text extends RNText {
+    name?: string
+}
 export class View extends RNView {
     name?: string
 }
+
 export {
     Animated,
     Dimensions,
     Easing,
-    Image,
     PixelRatio,
-    StyleSheet,
-    Text
+    StyleSheet
 };
