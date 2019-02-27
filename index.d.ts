@@ -6,18 +6,28 @@
 // TypeScript Version: 2.8
 
 import { ComponentType } from 'react';
+import * as React from 'react';
 import {
     Animated,
     Dimensions,
     Easing,
-    Image as RNImage,
+    Image,
     PixelRatio,
     PlatformOSType as RNPlatformOSType,
     StyleSheet,
     Text as RNText,
     TouchableOpacityProps,
-    View as RNView
+    View as RNView,
+    ViewProps,
+    TextProps
 } from 'react-native';
+
+export interface SketchAppProps {
+    name?: string
+}
+
+export class View extends React.Component<ViewProps & SketchAppProps> { }
+export class Text extends React.Component<TextProps & SketchAppProps> { }
 
 export const Touchable: ComponentType<TouchableOpacityProps>;
 
@@ -30,20 +40,13 @@ export interface PlatformStatic {
 }
 export const Platform: PlatformStatic;
 
-export class Image extends RNImage {
-    // name?: string
-}
-export class Text extends RNText {
-    // name?: string
-}
-export class View extends RNView {
-    // name?: string
-}
-
 export {
     Animated,
     Dimensions,
     Easing,
+    Image,
     PixelRatio,
-    StyleSheet
+    StyleSheet,
+    // Text,
+    // View
 };
